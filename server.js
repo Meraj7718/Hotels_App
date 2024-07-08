@@ -8,12 +8,21 @@
 const express = require('express');
 const app = express(); 
 const db = require('./db');
-const bodyParser = require('body-parser');
+require('dotenv').config();
 
+const bodyParser = require('body-parser');
 app.use(bodyParser.json());
+const PORT = process.env.PORT   || 3000;
 
 // const Person = require('./module/person');
 // const MenuItem = require('./module/MenuItem');
+
+//Middelware Function
+const logRequest = (req, res, next) =>{
+    console.log(`[${new Date().toLocaleString()}] Request Made to : ${req.orignalUrl}`);
+    next ();
+}
+
 
 
 app.get('/khan', function (req, res) {
@@ -126,6 +135,7 @@ const menuItemRoutes = require('./routes/menuItemRoutes');
 // use the Routes
 app.use('/person', personRoutes);
 app.use('/menu', menuItemRoutes);
+
 
 
 // Your Express.js code here
