@@ -3,8 +3,8 @@ require('dotenv').config();
 
 // const mongoURL = 'mongodb://localhost:27017/hotels'  //db is my database name
 // const mongoURL = 'mongodb+srv://meraj5849:Meraj7718@hotels.crgu5fn.mongodb.net/';
-const mongoURL = process.env.MONGODB_URL
-// const mongoURL = process.env.MONGODB_URL_LOCAL 
+// const mongoURL = process.env.MONGODB_URL
+   const mongoURL = process.env.MONGODB_URL_LOCAL 
 
 
 //setup MongoDB Connection

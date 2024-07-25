@@ -34,7 +34,14 @@ const Personschema = new mongoose.Schema({
         type: Number,
         required: true
     },
-
+    username: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    }
     
 });
 
@@ -42,4 +49,3 @@ const Personschema = new mongoose.Schema({
 
 const Person =  mongoose.model('Person', Personschema);
 module.exports = Person;
-
