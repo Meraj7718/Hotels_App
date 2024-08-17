@@ -306,10 +306,9 @@ const personRoutes = require('./routes/personRoutes');
 const menuItemRoutes = require('./routes/menuItemRoutes');
 const Person = require('./module/person');
 // use the Routes
-app.use('/person', localAuthMiddleware, personRoutes);
+app.use('/person', personRoutes);
 // app.use('/person', personRoutes);
 app.use('/menu', menuItemRoutes);
-
 
 
 // Your Express.js code here
